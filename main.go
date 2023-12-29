@@ -1,8 +1,10 @@
 package main
 
 import (
-	"movie-review-api/database/database"
 	"os"
+
+	"github.com/hienphan0111/movie-review-api/database"
+	"github.com/hienphan0111/movie-review-api/routes"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,6 +21,8 @@ func main() {
 
 	//Log events
 	router.Use(gin.Logger())
+
+	routes.AuthRoutes(router)
 
 	router.GET("/api", func(c *gin.Context) {
 		c.JSON(200, gin.H{

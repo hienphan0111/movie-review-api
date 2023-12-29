@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"movie-review-api/controllers"
+	"github.com/hienphan0111/movie-review-api/controllers"
 
 	"github.com/gin-gonic/gin"
 )
